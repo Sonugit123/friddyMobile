@@ -44,6 +44,11 @@ import ConvertSelectToken from '../../screens/convert/selectToken/ConvertSelectT
 import ConvertConfirmation from '../../screens/convert/convertConfirmation/ConvertConfirmation';
 import ConversionComplete from '../../screens/convert/conversionComplete/ConversionComplete';
 import NewUserBuyCrypto from '../../screens/buyCrypto/newUserBuyCrypto/NewUserBuyCrypto';
+import QueuingSellers from '../../screens/buyCrypto/queuingSellers/QueuingSellers';
+import SellerInformation from '../../screens/buyCrypto/sellerInformation/SellerInformation';
+import MakePayment from '../../screens/buyCrypto/makePayment/MakePayment';
+import ProofOfPayment from '../../screens/buyCrypto/proofOfPayment/ProofOfPayment';
+import WaitingForSeller from '../../screens/buyCrypto/waitingForSeller/WaitingForSeller';
 
 const Stack = createNativeStackNavigator();
 
@@ -96,7 +101,12 @@ const StackNavigator = () => {
       <Stack.Screen name='ConvertSelectToken' component={ConvertSelectToken}/> */}
       {/* <Stack.Screen name='ConvertConfirmation' component={ConvertConfirmation}/> */}
       {/* <Stack.Screen name='ConversionComplete' component={ConversionComplete}/> */}
-      <Stack.Screen name='NewUserBuyCrypto' component={NewUserBuyCrypto}/>
+      {/* <Stack.Screen name='NewUserBuyCrypto' component={NewUserBuyCrypto}/> */}
+      {/* <Stack.Screen name='QueuingSellers' component={QueuingSellers}/> */}
+      {/* <Stack.Screen name='SellerInformation' component={SellerInformation}/> */}
+      {/* <Stack.Screen name='MakePayment' component={MakePayment}/> */}
+      {/* <Stack.Screen name='ProofOfPayment' component={ProofOfPayment}/> */}
+      <Stack.Screen name='WaitingForSeller' component={WaitingForSeller}/>
     </Stack.Navigator>
   )
 }
