@@ -22,9 +22,12 @@ interface customButton {
     leftImage?: ImageSourcePropType;
     rightImage?: ImageSourcePropType;
     imageSize?: number;
+    iconColor?: string;
+    margLeft?: number;
+    margRight?: number;
 }
 const CustomButton = (props: customButton) => {
-    const { title, onPress, width, disable, topHeight, bgColor, txtColor, leftImage, rightImage, imageSize, borderColor, borderWidth, fontsize, fontfamily, bordRadius } = props;
+    const { title, onPress, width, disable, topHeight, bgColor, txtColor, leftImage, rightImage, imageSize, borderColor, borderWidth, fontsize, fontfamily, bordRadius,iconColor, margLeft, margRight } = props;
     console.log("leftImage->",leftImage);
     
     return (
@@ -38,14 +41,14 @@ const CustomButton = (props: customButton) => {
             {leftImage && (
                 <Image 
                 source={leftImage}
-                style={{ width: scale(imageSize || 24), height: scale(imageSize || 24), marginRight: scale(16) }}
+                style={{ width: scale(imageSize || 24), height: scale(imageSize || 24), marginRight: scale(margRight || 16), tintColor: iconColor }}
                 />
             )}
             <Text style={[style.titleTxt, { color: txtColor || ColorConstants.WHITE, fontSize: fontScale(fontsize || 16), fontFamily: fontfamily || Fontconstants.MEDIUM }]}>{title}</Text>
             {rightImage && (
                 <Image 
                  source={rightImage}
-                 style={{ width: scale(imageSize || 24), height: scale(imageSize || 24), marginLeft: scale(16) }}
+                 style={{ width: scale(imageSize || 24), height: scale(imageSize || 24), marginLeft: scale(margLeft || 16),tintColor: iconColor }}
                 />
             )}
         </TouchableOpacity>

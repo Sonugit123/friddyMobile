@@ -49,6 +49,62 @@ import SellerInformation from '../../screens/buyCrypto/sellerInformation/SellerI
 import MakePayment from '../../screens/buyCrypto/makePayment/MakePayment';
 import ProofOfPayment from '../../screens/buyCrypto/proofOfPayment/ProofOfPayment';
 import WaitingForSeller from '../../screens/buyCrypto/waitingForSeller/WaitingForSeller';
+import DrawerNavigator from '../drawerNavigator/DrawerNavigator';
+import SecurityVerification from '../../screens/accountSecurity/changeNumber/securityVerification/SecurityVerification';
+import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
+import VerifyNewNumber from '../../screens/accountSecurity/changeNumber/verifyNewNumber/VerifyNewNumber';
+import NumberChangedSuccess from '../../screens/accountSecurity/changeNumber/numberChangedSuccess/NumberChangedSuccess';
+import ChangeEmail from '../../screens/accountSecurity/changeEmailModule/changeEmail/ChangeEmail';
+import SureEmailChange from '../../screens/accountSecurity/changeEmailModule/sureEmailChange/SureEmailChange';
+import SecurityVerificationEmail from '../../screens/accountSecurity/changeEmailModule/securityVerificationEmail/SecurityVerificationEmail';
+import VerifyNewEmail from '../../screens/accountSecurity/changeEmailModule/verifyNewEmail/VerifyNewEmail';
+import EmailChangedSuccess from '../../screens/accountSecurity/changeEmailModule/emailChangedSuccess/EmailChangedSuccess';
+import ChangePassword from '../../screens/accountSecurity/changePasswordModule/changePassword/ChangePassword';
+import SureChangePassword from '../../screens/accountSecurity/changePasswordModule/sureChangePassword/SureChangePassword';
+import SecurityVerificationPassword from '../../screens/accountSecurity/changePasswordModule/securityVerificationPassword/SecurityVerificationPassword';
+import ChangeOldPassword from '../../screens/accountSecurity/changePasswordModule/changeOldPassword/ChangeOldPassword';
+import PasswordChangedSuccess from '../../screens/accountSecurity/changePasswordModule/passwordChangedSuccess/PasswordChangedSuccess';
+import CheckGoogleAuth from '../../screens/accountSecurity/googleAuthModule/checkGoogleAuth/CheckGoogleAuth';
+import SecurityVerificationGoogleAuth from '../../screens/accountSecurity/googleAuthModule/securityVerificationGoogleAuth/SecurityVerificationGoogleAuth';
+import SureGoogleAuth from '../../screens/accountSecurity/googleAuthModule/sureGoogleAuth/SureGoogleAuth';
+import EnableAuthenticator from '../../screens/accountSecurity/googleAuthModule/enableAuthenticator/EnableAuthenticator';
+import VerifyAuthenticatorCode from '../../screens/accountSecurity/googleAuthModule/verifyAuthenticatorCode/VerifyAuthenticatorCode';
+import AuthenticatorSuccess from '../../screens/accountSecurity/googleAuthModule/authenticatorSuccess/AuthenticatorSuccess';
+import AddPaymentMethods from '../../screens/setting/paymentMethods/addPaymentMethods/AddPaymentMethods';
+import ShowPaymentMethods from '../../screens/setting/paymentMethods/showPaymentMethods/ShowPaymentMethods';
+import PaymentMethodForm from '../../screens/setting/paymentMethods/paymentMethodForm/PaymentMethodForm';
+import ShowCommunicationMethods from '../../screens/setting/communicationMethods/showCommunicationMethods/ShowCommunicationMethods';
+import AddCommunicationMethods from '../../screens/setting/communicationMethods/addCommunicationMethods/AddCommunicationMethods';
+import CommunicationMethodForm from '../../screens/setting/communicationMethods/communicationMethodForm/CommunicationMethodForm';
+import AccountSettings from '../../screens/setting/accountSettings/AccountSettings';
+import AccountActivity from '../../screens/setting/accountActivity/AccountActivity';
+import DisableAccountInfo from '../../screens/setting/accountActivity/disableAccount/disableAccountInfo/DisableAccountInfo';
+import DisableAccountConfirm from '../../screens/setting/accountActivity/disableAccount/disableAccountConfirm/DisableAccountConfirm';
+import ResolutionCenter from '../../screens/setting/helpDesk/resolutionCenter/ResolutionCenter';
+import ChatScreen from '../../screens/setting/helpDesk/chatScreen/ChatScreen';
+import QuickReport from '../../screens/setting/quickReport/QuickReport';
+import FAQs from '../../screens/setting/FAQs/FAQs';
+import SellCrypto from '../../screens/sellCrypto/SellCrypto';
+import SellCryptoAddPaymentMethod from '../../screens/sellCrypto/sellCryptoAddPaymentMethod/SellCryptoAddPaymentMethod';
+import SellCryptoPaymentMethodForm from '../../screens/sellCrypto/sellCryptoPaymentMethodForm/SellCryptoPaymentMethodForm';
+import SellCryptoAddCommunicationMethod from '../../screens/sellCrypto/sellCryptoAddCommunicationMethod/SellCryptoAddCommunicationMethod';
+import SellCryptoCommunicationMethodForm from '../../screens/sellCrypto/sellCryptoCommunicationMethodForm/SellCryptoCommunicationMethodForm';
+import SellCryptoAddCommunicationVerifyDetails from '../../screens/sellCrypto/sellCryptoAddCommunicationVerifyDetails/SellCryptoAddCommunicationVerifyDetails';
+import SellCryptoTokens from '../../screens/sellCrypto/sellCryptoTokens/SellCryptoTokens';
+import SellCryptoAtWhatPrice from '../../screens/sellCrypto/sellCryptoAtWhatPrice/SellCryptoAtWhatPrice';
+import IdentityVerification from '../../screens/kyc/identityVerification/IdentityVerification';
+import ChooseIdTypeForKyc from '../../screens/kyc/chooseIdTypeForKyc/ChooseIdTypeForKyc';
+import FrontIdCardReview from '../../screens/kyc/frontIdCardReview/FrontIdCardReview';
+import BackIdCardReview from '../../screens/kyc/backIdCardReview/BackIdCardReview';
+import QuickSelfieInfo from '../../screens/kyc/quickSelfieInfo/QuickSelfieInfo';
+import KycSelfie from '../../screens/kyc/kycSelfie/KycSelfie';
+import KycVerified from '../../screens/kyc/kycVerified/KycVerified';
+import PresaleAllPaymentMethod from '../../screens/presale/presaleAllPaymentMethod/PresaleAllPaymentMethod';
+import PresaleCheckout from '../../screens/presale/presaleCheckout/PresaleCheckout';
+import PresaleProvideDetails from '../../screens/presale/presaleProvideDetails/PresaleProvideDetails';
+import PresaleQueuingSellers from '../../screens/presale/presaleQueuingSellers/PresaleQueuingSellers';
+import PresaleSellerInformation from '../../screens/presale/presaleSellerInformation/PresaleSellerInformation';
+// import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
 
@@ -106,9 +162,65 @@ const StackNavigator = () => {
       {/* <Stack.Screen name='SellerInformation' component={SellerInformation}/> */}
       {/* <Stack.Screen name='MakePayment' component={MakePayment}/> */}
       {/* <Stack.Screen name='ProofOfPayment' component={ProofOfPayment}/> */}
-      <Stack.Screen name='WaitingForSeller' component={WaitingForSeller}/>
+      {/* <Stack.Screen name='WaitingForSeller' component={WaitingForSeller}/> */}
+
+      {/* <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} /> */}
+      {/* <Stack.Screen name="ChangePhoneNumber" component={ChangePhoneNumber} /> */}
+      {/* <Stack.Screen name="SecurityVerification" component={SecurityVerification} /> */}
+      {/* <Stack.Screen name="VerifyNewNumber" component={VerifyNewNumber} /> */}
+      {/* <Stack.Screen name="NumberChangedSuccess" component={NumberChangedSuccess} /> */}
+      {/* <Stack.Screen name="ChangeEmail" component={ChangeEmail} /> */}
+      {/* <Stack.Screen name="SureEmailChange" component={SureEmailChange} /> */}
+      {/* <Stack.Screen name="SecurityVerificationEmail" component={SecurityVerificationEmail} /> */}
+      {/* <Stack.Screen name="VerifyNewEmail" component={VerifyNewEmail}/> */}
+      {/* <Stack.Screen name="EmailChangedSuccess" component={EmailChangedSuccess}/> */}
+      {/* <Stack.Screen name="ChangePassword" component={ChangePassword}/> */}
+      {/* <Stack.Screen name="SureChangePassword" component={SureChangePassword}/> */}
+      {/* <Stack.Screen name="SecurityVerificationPassword" component={SecurityVerificationPassword}/> */}
+      {/* <Stack.Screen name="ChangeOldPassword" component={ChangeOldPassword}/> */}
+      {/* <Stack.Screen name="PasswordChangedSuccess" component={PasswordChangedSuccess}/> */}
+      {/* <Stack.Screen name="CheckGoogleAuth" component={CheckGoogleAuth}/> */}
+      {/* <Stack.Screen name="SecurityVerificationGoogleAuth" component={SecurityVerificationGoogleAuth}/> */}
+      {/* <Stack.Screen name="SureGoogleAuth" component={SureGoogleAuth}/> */}
+      {/* <Stack.Screen name="EnableAuthenticator" component={EnableAuthenticator}/> */}
+      {/* <Stack.Screen name="VerifyAuthenticatorCode" component={VerifyAuthenticatorCode}/> */}
+      {/* <Stack.Screen name='AuthenticatorSuccess' component={AuthenticatorSuccess}/> */}
+      {/* <Stack.Screen name='ShowPaymentMethods' component={ShowPaymentMethods}/> */}
+      {/* <Stack.Screen name='AddPaymentMethods' component={AddPaymentMethods}/> */}
+      {/* <Stack.Screen name='PaymentMethodForm' component={PaymentMethodForm}/> */}
+      {/* <Stack.Screen name='ShowCommunicationMethods' component={ShowCommunicationMethods}/> */}
+      {/* <Stack.Screen name='AddCommunicationMethods' component={AddCommunicationMethods}/> */}
+      {/* <Stack.Screen name='CommunicationMethodForm' component={CommunicationMethodForm}/> */}
+      {/* <Stack.Screen name='AccountSettings' component={AccountSettings}/> */}
+      {/* <Stack.Screen name='AccountActivity' component={AccountActivity}/> */}
+      {/* <Stack.Screen name='DisableAccountInfo' component={DisableAccountInfo}/> */}
+      {/* <Stack.Screen name='DisableAccountConfirm' component={DisableAccountConfirm}/> */}
+      {/* <Stack.Screen name='ResolutionCenter' component={ResolutionCenter}/> */}
+      {/* <Stack.Screen name='ChatScreen' component={ChatScreen}/> */}
+      {/* <Stack.Screen name='QuickReport' component={QuickReport}/> */}
+      {/* <Stack.Screen name='FAQs' component={FAQs}/> */}
+      {/* <Stack.Screen name='SellCrypto' component={SellCrypto}/> */}
+      {/* <Stack.Screen name='SellCryptoAddPaymentMethod' component={SellCryptoAddPaymentMethod}/> */}
+      {/* <Stack.Screen name='SellCryptoPaymentMethodForm' component={SellCryptoPaymentMethodForm}/> */}
+      {/* <Stack.Screen name='SellCryptoAddCommunicationMethod' component={SellCryptoAddCommunicationMethod}/> */}
+      {/* <Stack.Screen name='SellCryptoCommunicationMethodForm' component={SellCryptoCommunicationMethodForm}/> */}
+      {/* <Stack.Screen name='SellCryptoAddCommunicationVerifyDetails' component={SellCryptoAddCommunicationVerifyDetails}/> */}
+      {/* <Stack.Screen name='SellCryptoTokens' component={SellCryptoTokens}/> */}
+      {/* <Stack.Screen name='SellCryptoAtWhatPrice' component={SellCryptoAtWhatPrice}/> */}
+      {/* <Stack.Screen name='IdentityVerification' component={IdentityVerification}/> */}
+      {/* <Stack.Screen name='ChooseIdTypeForKyc' component={ChooseIdTypeForKyc}/> */}
+      {/* <Stack.Screen name='FrontIdCardReview' component={FrontIdCardReview}/> */}
+      {/* <Stack.Screen name='BackIdCardReview' component={BackIdCardReview}/> */}
+      {/* <Stack.Screen name='QuickSelfieInfo' component={QuickSelfieInfo}/> */}
+      {/* <Stack.Screen name='KycSelfie' component={KycSelfie}/> */}
+      {/* <Stack.Screen name='KycVerified' component={KycVerified}/> */}
+      {/* <Stack.Screen name='PresaleCheckout' component={PresaleCheckout}/> */}
+      {/* <Stack.Screen name='PresaleAllPaymentMethod' component={PresaleAllPaymentMethod}/> */}
+      {/* <Stack.Screen name='PresaleProvideDetails' component={PresaleProvideDetails}/> */}
+      {/* <Stack.Screen name='PresaleQueuingSellers' component={PresaleQueuingSellers}/> */}
+      <Stack.Screen name='PresaleSellerInformation' component={PresaleSellerInformation}/>
     </Stack.Navigator>
-  )
+  ) 
 }
 
 export default StackNavigator

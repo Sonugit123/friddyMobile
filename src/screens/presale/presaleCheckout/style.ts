@@ -1,0 +1,232 @@
+import { StyleSheet } from "react-native";
+import { ColorConstants } from "../../../constants/colorConstants";
+import { fontScale, getTextStyle, scale } from "../../../utils/scale";
+import { Fontconstants } from "../../../constants/fontConstants";
+
+export const style = StyleSheet.create({
+    container: {
+        backgroundColor: ColorConstants.WHITE,
+        flex: 1,
+    },
+    safeAreaStyle: {
+        flex: 1,
+        backgroundColor: ColorConstants.WHITE,
+        paddingHorizontal: scale(16),
+    },
+    headingTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(20),
+    },
+    friddyCoinImg: {
+        width: scale(32),
+        height: scale(32),
+        marginTop: scale(16),
+    },
+    friddyPresaleTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(16),
+        marginTop: scale(16),
+    },
+    participateTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginTop: scale(8),
+    },
+    friddyBox: {
+        width: scale(327),
+        height: scale(40),
+        borderRadius: scale(8),
+        borderWidth: scale(1),
+        borderColor: ColorConstants.QR_BOX_BG,
+        backgroundColor: ColorConstants.SIGNIN_BOX,
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: scale(8),
+        padding: scale(8),
+        marginTop: scale(16),
+    },
+    nextPriceIncreaseTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginTop: scale(16),
+    },
+    durationBox: {
+        width: scale(64),
+        height: scale(32),
+        borderWidth: scale(1),
+        borderColor: ColorConstants.MODEL_BORDER_COLOR,
+        borderRadius: scale(8),
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: scale(8),
+    },
+    durationNumTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(16),
+    },
+    durationTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(12),
+    },
+    durationContainer: {
+        flexDirection: 'row',
+        gap: scale(16),
+        marginTop: scale(8),
+    },
+    inputAmountTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginTop: scale(3),
+        marginBottom: scale(8),
+    },
+    inputAmountBox: {
+        width: scale(327),
+        height: scale(40),
+        borderWidth: scale(1),
+        borderRadius: scale(32),
+    },
+    inputBox: {
+        borderWidth: scale(1.5),
+        borderColor: ColorConstants.BORDER_COLOR,
+        borderRadius: scale(32),
+        height: scale(40),
+        paddingLeft: scale(25),
+        fontSize: fontScale(14),
+        fontFamily: Fontconstants.REGULAR,
+    },
+    dollarTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+    },
+    dollarIconView: {
+        position: 'absolute',
+        left: scale(8),
+        top: scale(10),
+    },
+    inputFriddyLogoAndTxt: {
+        position: 'absolute',
+        right: scale(8),
+        top: scale(10),
+        flexDirection: 'row',
+        gap: scale(8),
+    },
+    friddyLogoImg: {
+        width: scale(18),
+        height: scale(18),
+    },
+    inputFriddyTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+    },
+    payWithTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginTop: scale(24),
+    },
+    searchOtherMethodView: {
+        width: scale(327),
+        height: scale(40),
+        borderWidth: scale(0.5),
+        borderRadius: scale(8),
+        borderColor: ColorConstants.MODEL_BORDER_COLOR,
+        backgroundColor: ColorConstants.SIGNIN_BOX,
+        flexDirection: 'row',
+        // gap: scale(8),
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: scale(8),
+        marginTop: scale(8),
+    },
+    searchOtherMethodTxt: {
+        color: ColorConstants.BTNCOLOR,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginLeft: scale(8),
+    },
+    payIcon: {
+        width: scale(16),
+        height: scale(16),
+        borderRadius: scale(16),
+        // position: 'absolute',
+    },
+    payIconView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    arrowRightIcon: {
+        tintColor: ColorConstants.BTNCOLOR,
+        width: scale(16),
+        height: scale(16),
+    },
+    paymentMethodView: {
+        // width: scale(73),
+        height: scale(32),
+        borderWidth: scale(0.5),
+        borderColor: ColorConstants.MODEL_BORDER_COLOR,
+        borderRadius: scale(8),
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: scale(8),
+        paddingLeft: scale(4),
+    },
+    paymentMethodIcon: {
+        width: scale(24),
+        height: scale(24),
+    },
+    paymentMethodTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(12),
+    },
+    paymentMethodContainer: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: scale(8),
+        marginTop: scale(8),
+    },
+    orPayWithTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginTop: scale(24),
+    },
+    checkBoxFill: {
+        width: scale(14),
+        height: scale(14),
+    },
+    checkBoxView: {
+        flexDirection: 'row',
+        gap: scale(8),
+        marginTop: scale(3),
+    },
+    privacyPolicyTxt: {
+        color: ColorConstants.BTNCOLOR,
+        textDecorationLine: 'underline',
+    },
+    poweredByTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.MEDIUM,
+        ...getTextStyle(14),
+    },
+    friddyLogo: {
+        width: scale(60),
+        height: scale(15),
+    },
+    poweredByContainer: {
+        flexDirection: 'row',
+        gap: scale(8),
+        alignItems: 'center',
+        marginTop: scale(24),
+    }
+})

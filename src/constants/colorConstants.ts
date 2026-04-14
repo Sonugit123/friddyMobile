@@ -27,4 +27,8 @@ export const ColorConstants = {
     PROGRESS_RED_BORDER: '#F8CDC9',
     CODE_DESC: '#495057',
     TO_CONTAINER: '#A7B9FF',
+    GET_CODE: '#6685FF',
+    VERIFY_BTN_TXT: '#A1A7AD',
+    PROFILE_ICON_BG: '#E74C3C26',
+    UPLOAD_BTN: '#EBEFFF',
 }

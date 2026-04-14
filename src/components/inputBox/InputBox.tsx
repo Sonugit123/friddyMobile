@@ -17,6 +17,7 @@ interface prop {
   keyboardType: 'default' | 'email-address' | 'numeric' | 'phone-pad';
   autoCapitalize: 'none' | 'sentences' | 'words' | 'characters';
   label: string;
+  height: number;
 }
 
 const InputBox = (props: Partial<prop>) => {
@@ -31,6 +32,7 @@ const InputBox = (props: Partial<prop>) => {
     keyboardType,
     autoCapitalize,
     label,
+    height,
 
   } = props;
   const [showPassword, setShowPassword] = useState(password);
@@ -44,7 +46,7 @@ const InputBox = (props: Partial<prop>) => {
         <TextInput
           style={[
             style.inputBox,
-            { width: width || '100%' },
+            { width: width ? scale(width) : '100%', height: height ? scale(height) : scale(52) },
             isFocused && { borderColor: ColorConstants.BTNCOLOR },
             // error ? style.errorInputBox : null,
           ]}
