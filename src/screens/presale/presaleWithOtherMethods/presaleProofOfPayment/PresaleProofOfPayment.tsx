@@ -1,13 +1,13 @@
 import { View, Text, Image, Animated, Pressable } from 'react-native';
 import React, { useRef } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../../../components/header/Header';
 import { style } from './style';
-import { IconConstants } from '../../../constants/iconConstants';
-import PreviewBuyCryptoWithTimer from '../../../components/previewBuyCryptoWithTimer/PreviewBuyCryptoWithTimer';
-import { ColorConstants } from '../../../constants/colorConstants';
-import CustomButton from '../../../components/customButton/CustomButton';
-import { Fontconstants } from '../../../constants/fontConstants';
+import Header from '../../../../components/header/Header';
+import { IconConstants } from '../../../../constants/iconConstants';
+import PreviewBuyCryptoWithTimer from '../../../../components/previewBuyCryptoWithTimer/PreviewBuyCryptoWithTimer';
+import { ColorConstants } from '../../../../constants/colorConstants';
+import CustomButton from '../../../../components/customButton/CustomButton';
+import { Fontconstants } from '../../../../constants/fontConstants';
 
 const PresaleProofOfPayment = () => {
   // assuming original height is 144 (change if different)

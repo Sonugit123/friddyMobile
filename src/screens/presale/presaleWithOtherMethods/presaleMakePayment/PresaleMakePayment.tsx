@@ -1,14 +1,14 @@
 import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../../../components/header/Header';
-import { IconConstants } from '../../../constants/iconConstants';
 import { style } from './style';
-import PreviewBuyCryptoWithTimer from '../../../components/previewBuyCryptoWithTimer/PreviewBuyCryptoWithTimer';
-import { ColorConstants } from '../../../constants/colorConstants';
-import { scale } from '../../../utils/scale';
-import CustomButton from '../../../components/customButton/CustomButton';
-import { Fontconstants } from '../../../constants/fontConstants';
+import Header from '../../../../components/header/Header';
+import { IconConstants } from '../../../../constants/iconConstants';
+import PreviewBuyCryptoWithTimer from '../../../../components/previewBuyCryptoWithTimer/PreviewBuyCryptoWithTimer';
+import { ColorConstants } from '../../../../constants/colorConstants';
+import { scale } from '../../../../utils/scale';
+import CustomButton from '../../../../components/customButton/CustomButton';
+import { Fontconstants } from '../../../../constants/fontConstants';
 
 const PresaleMakePayment = () => {
   return (

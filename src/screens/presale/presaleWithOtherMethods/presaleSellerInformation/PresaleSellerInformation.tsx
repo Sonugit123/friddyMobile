@@ -1,14 +1,14 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
-import { IconConstants } from '../../../constants/iconConstants';
+import { View, Text, Image } from 'react-native';
+import React from 'react';
+import { IconConstants } from '../../../../constants/iconConstants';
 import { style } from './style';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../../../components/header/Header';
-import PreviewBuyCrypto from '../../../components/previewBuyCrypto/PreviewBuyCrypto';
-import { ColorConstants } from '../../../constants/colorConstants';
-import { scale } from '../../../utils/scale';
-import CustomButton from '../../../components/customButton/CustomButton';
-import { Fontconstants } from '../../../constants/fontConstants';
+import Header from '../../../../components/header/Header';
+import PreviewBuyCrypto from '../../../../components/previewBuyCrypto/PreviewBuyCrypto';
+import { ColorConstants } from '../../../../constants/colorConstants';
+import { scale } from '../../../../utils/scale';
+import CustomButton from '../../../../components/customButton/CustomButton';
+import { Fontconstants } from '../../../../constants/fontConstants';
 
 const sellerInformationData = [
   {
@@ -90,10 +90,7 @@ const PresaleSellerInformation = () => {
               <Image
                 key={index}
                 source={img}
-                style={[
-                  style.queueIcon,
-                  { left: index * scale(16)},
-                ]}
+                style={[style.queueIcon, { left: index * scale(16) }]}
               />
             ))}
           </View>
@@ -132,7 +129,7 @@ const PresaleSellerInformation = () => {
         <Text style={style.cancelTxt}>Cancel Transaction</Text>
       </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default PresaleSellerInformation
+export default PresaleSellerInformation;

@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { getTextStyle, scale } from "../../../utils/scale";
-import { ColorConstants } from "../../../constants/colorConstants";
-import { Fontconstants } from "../../../constants/fontConstants";
+import { getTextStyle, scale } from "../../../../utils/scale";
+import { ColorConstants } from "../../../../constants/colorConstants";
+import { Fontconstants } from "../../../../constants/fontConstants";
 
 export const style = StyleSheet.create({
     container: {
@@ -33,29 +33,30 @@ export const style = StyleSheet.create({
         color: ColorConstants.GRAY_LABEL,
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(14),
+        marginTop: scale(8),
     },
-        uploadProofView: {
-        // width: scale(327),
-        height: scale(144),
+    pdfView: {
+        width: scale(327),
+        height: scale(38),
         borderWidth: scale(1),
-        borderStyle: 'dashed',
         borderColor: ColorConstants.MODEL_BORDER_COLOR,
         borderRadius: scale(8),
+        borderStyle: 'dashed',
         marginTop: scale(24),
-        justifyContent: 'center',
         alignItems: 'center',
-        alignSelf: 'stretch',
+        justifyContent: 'center',
     },
-    uploadIcon: {
-        width: scale(14),
-        height: scale(14),
-    },
-    uploadTransScriptTxt: {
-        color: ColorConstants.BTNCOLOR,
+    pdfTxt: {
+        color: ColorConstants.BLACK,
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(12),
     },
-    uploadIconView: {
+    checkedIcon: {
+        width: scale(14),
+        height: scale(14),
+        tintColor: ColorConstants.BTNCOLOR,
+    },
+    pdfInnerView: {
         flexDirection: 'row',
         alignItems: 'center',
         gap: scale(8),

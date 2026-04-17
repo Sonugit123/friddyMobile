@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-import { ColorConstants } from "../../../constants/colorConstants";
-import { getTextStyle, scale } from "../../../utils/scale";
-import { Fontconstants } from "../../../constants/fontConstants";
+import { ColorConstants } from "../../../../constants/colorConstants";
+import { getTextStyle, scale } from "../../../../utils/scale";
+import { Fontconstants } from "../../../../constants/fontConstants";
 
 export const style = StyleSheet.create({
     container: {
@@ -28,11 +28,17 @@ export const style = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: scale(24),
     },
+    yourDetailsTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginTop: scale(16),
+    },
     paymentMethodTxt: {
         color: ColorConstants.GRAY_LABEL,
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(14),
-        marginTop: scale(8),
+        marginTop: scale(16),
     },
     paymentMethodIcon: {
         width: scale(24),
@@ -91,16 +97,41 @@ export const style = StyleSheet.create({
         justifyContent: 'space-between',
         marginTop: scale(8),
     },
-    existingUserTxt: {
+    queueTxt: {
         color: ColorConstants.BLACK,
         fontFamily: Fontconstants.REGULAR,
-        ...getTextStyle(12),
-        marginTop: scale(8),
-        alignSelf: 'center',
+        ...getTextStyle(14),
+        marginTop: scale(24),
     },
-    loginTxt: {
+    queueIcon: {
+        width: scale(24),
+        height: scale(24),
+        position: 'absolute',
+    },
+    queueLeftView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        // gap: scale(4),
+    },
+    queueRightView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: scale(4),
+    },
+    eyeIcon: {
+        width: scale(16),
+        height: scale(16),
+    },
+    onQueueTxt: {
         color: ColorConstants.BTNCOLOR,
-        fontFamily: Fontconstants.MEDIUM,
-        ...getTextStyle(12),
-    }
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+    },
+    queueContainer: {
+        marginTop: scale(8),
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        // backgroundColor: 'red'
+    },
 })

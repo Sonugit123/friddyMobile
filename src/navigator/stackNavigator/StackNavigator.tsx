@@ -99,16 +99,16 @@ import BackIdCardReview from '../../screens/kyc/backIdCardReview/BackIdCardRevie
 import QuickSelfieInfo from '../../screens/kyc/quickSelfieInfo/QuickSelfieInfo';
 import KycSelfie from '../../screens/kyc/kycSelfie/KycSelfie';
 import KycVerified from '../../screens/kyc/kycVerified/KycVerified';
-import PresaleAllPaymentMethod from '../../screens/presale/presaleAllPaymentMethod/PresaleAllPaymentMethod';
+import PresaleAllPaymentMethod from '../../screens/presale/presaleWithOtherMethods/presaleAllPaymentMethod/PresaleAllPaymentMethod';
 import PresaleCheckout from '../../screens/presale/presaleCheckout/PresaleCheckout';
 import PresaleProvideDetails from '../../screens/presale/presaleProvideDetails/PresaleProvideDetails';
 import PresaleQueuingSellers from '../../screens/presale/presaleQueuingSellers/PresaleQueuingSellers';
-import PresaleSellerInformation from '../../screens/presale/presaleSellerInformation/PresaleSellerInformation';
+import PresaleSellerInformation from '../../screens/presale/presaleWithOtherMethods/presaleSellerInformation/PresaleSellerInformation';
 import PresaleMakePayment from '../../screens/presale/presaleMakePayment/PresaleMakePayment';
 import PresaleProofOfPayment from '../../screens/presale/presaleProofOfPayment/PresaleProofOfPayment';
-import PresaleConfirmingPayment from '../../screens/presale/presaleConfirmingPayment/PresaleConfirmingPayment';
-import PresaleClaimFunds from '../../screens/presale/presaleClaimFunds/PresaleClaimFunds';
-import PresalePaymentSuccessful from '../../screens/presale/presalePaymentSuccessful/PresalePaymentSuccessful';
+import PresaleConfirmingPayment from '../../screens/presale/presaleWithOtherMethods/presaleConfirmingPayment/PresaleConfirmingPayment';
+import PresaleClaimFunds from '../../screens/presale/presaleWithOtherMethods/presaleClaimFunds/PresaleClaimFunds';
+import PresalePaymentSuccessful from '../../screens/presale/presaleWithOtherMethods/presalePaymentSuccessful/PresalePaymentSuccessful';
 import PresaleConnectWallet from '../../screens/presale/presaleWithCrypto/presaleConnectWallet/PresaleConnectWallet';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 

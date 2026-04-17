@@ -2,10 +2,10 @@ import { View, Text, Image } from 'react-native';
 import React, { useState } from 'react';
 import { style } from './style';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../../../components/header/Header';
-import BackHeader from '../../../components/backHeader/BackHeader';
-import SearchBar from '../../../components/searchBar/SearchBar';
-import { IconConstants } from '../../../constants/iconConstants';
+import Header from '../../../../components/header/Header';
+import BackHeader from '../../../../components/backHeader/BackHeader';
+import SearchBar from '../../../../components/searchBar/SearchBar';
+import { IconConstants } from '../../../../constants/iconConstants';
 
 const PresaleAllPaymentMethod = () => {
   const [search, setSearch] = useState('');

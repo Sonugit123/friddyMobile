@@ -2,12 +2,12 @@ import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { style } from './style';
-import Header from '../../../components/header/Header';
-import { IconConstants } from '../../../constants/iconConstants';
-import PreviewMoney from '../../../components/previewMoney/PreviewMoney';
-import { ColorConstants } from '../../../constants/colorConstants';
-import { Fontconstants } from '../../../constants/fontConstants';
-import CustomButton from '../../../components/customButton/CustomButton';
+import Header from '../../../../components/header/Header';
+import { IconConstants } from '../../../../constants/iconConstants';
+import PreviewMoney from '../../../../components/previewMoney/PreviewMoney';
+import { ColorConstants } from '../../../../constants/colorConstants';
+import { Fontconstants } from '../../../../constants/fontConstants';
+import CustomButton from '../../../../components/customButton/CustomButton';
 
 const PresalePaymentSuccessful = () => {
   return (

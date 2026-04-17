@@ -2,12 +2,12 @@ import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { style } from './style';
-import Header from '../../../components/header/Header';
-import { IconConstants } from '../../../constants/iconConstants';
-import CustomButton from '../../../components/customButton/CustomButton';
-import { ColorConstants } from '../../../constants/colorConstants';
-import { Fontconstants } from '../../../constants/fontConstants';
-import Divider from '../../../components/divider/Divider';
+import Header from '../../../../components/header/Header';
+import { IconConstants } from '../../../../constants/iconConstants';
+import CustomButton from '../../../../components/customButton/CustomButton';
+import { ColorConstants } from '../../../../constants/colorConstants';
+import { Fontconstants } from '../../../../constants/fontConstants';
+import Divider from '../../../../components/divider/Divider';
 
 const btnData = [
   {
@@ -95,9 +95,25 @@ const PresaleClaimFunds = () => {
               return (
                 <>
                   {index === 1 && <Text style={style.orTxt}>OR</Text>}
-                  <View key={item.id} style={[style.btnView,{backgroundColor: index ===1 ? ColorConstants.BLACK : ""}]}>
+                  <View
+                    key={item.id}
+                    style={[
+                      style.btnView,
+                      {
+                        backgroundColor:
+                          index === 1 ? ColorConstants.BLACK : '',
+                      },
+                    ]}
+                  >
                     <Image source={item.icon} style={style.btnIcon} />
-                    <Text style={[style.btnTxt,{color: index ===1 ? ColorConstants.WHITE : ""}]}>{item.title}</Text>
+                    <Text
+                      style={[
+                        style.btnTxt,
+                        { color: index === 1 ? ColorConstants.WHITE : '' },
+                      ]}
+                    >
+                      {item.title}
+                    </Text>
                   </View>
                 </>
               );

@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
-import { getTextStyle, scale } from "../../../utils/scale";
-import { ColorConstants } from "../../../constants/colorConstants";
-import { Fontconstants } from "../../../constants/fontConstants";
+import { getTextStyle, scale } from "../../../../utils/scale";
+import { ColorConstants } from "../../../../constants/colorConstants";
+import { Fontconstants } from "../../../../constants/fontConstants";
+
 
 export const style = StyleSheet.create({
     container: {

@@ -2,20 +2,17 @@ import { View, Text, Image } from 'react-native';
 import React from 'react';
 import { style } from './style';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Header from '../../../components/header/Header';
-import { IconConstants } from '../../../constants/iconConstants';
-import PreviewBuyCrypto from '../../../components/previewBuyCrypto/PreviewBuyCrypto';
-import { ColorConstants } from '../../../constants/colorConstants';
-import { scale } from '../../../utils/scale';
-import CustomButton from '../../../components/customButton/CustomButton';
-import { Fontconstants } from '../../../constants/fontConstants';
+import { IconConstants } from '../../../../constants/iconConstants';
+import Header from '../../../../components/header/Header';
+import PreviewBuyCrypto from '../../../../components/previewBuyCrypto/PreviewBuyCrypto';
+import { ColorConstants } from '../../../../constants/colorConstants';
+import { scale } from '../../../../utils/scale';
+import CustomButton from '../../../../components/customButton/CustomButton';
+import { Fontconstants } from '../../../../constants/fontConstants';
 
 const queueImages = [
   IconConstants.queue1,
   IconConstants.queue2,
-  //   IconConstants.queue2,
-  //   IconConstants.queue3,
-  //   IconConstants.more,
 ];
 const PresaleQueuingSellers = () => {
   return (
