@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../../screens/auth/login/Login';
 import LoginGAuth from '../../screens/auth/loginGAuth/LoginGAuth';
@@ -109,16 +109,14 @@ import PresaleProofOfPayment from '../../screens/presale/presaleProofOfPayment/P
 import PresaleConfirmingPayment from '../../screens/presale/presaleConfirmingPayment/PresaleConfirmingPayment';
 import PresaleClaimFunds from '../../screens/presale/presaleClaimFunds/PresaleClaimFunds';
 import PresalePaymentSuccessful from '../../screens/presale/presalePaymentSuccessful/PresalePaymentSuccessful';
+import PresaleConnectWallet from '../../screens/presale/presaleWithCrypto/presaleConnectWallet/PresaleConnectWallet';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
-
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
-    >
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       {/* <Stack.Screen name="Login" component={Login} /> */}
       {/* <Stack.Screen name="LoginGAuth" component={LoginGAuth} /> */}
       {/* <Stack.Screen name='ForgotPassword' component={ForgotPassword} /> */}
@@ -228,9 +226,13 @@ const StackNavigator = () => {
       {/* <Stack.Screen name='PresaleProofOfPayment' component={PresaleProofOfPayment}/> */}
       {/* <Stack.Screen name='PresaleConfirmingPayment' component={PresaleConfirmingPayment}/> */}
       {/* <Stack.Screen name='PresaleClaimFunds' component={PresaleClaimFunds}/> */}
-      <Stack.Screen name='PresalePaymentSuccessful' component={PresalePaymentSuccessful}/>
+      {/* <Stack.Screen name='PresalePaymentSuccessful' component={PresalePaymentSuccessful}/> */}
+      <Stack.Screen
+        name="PresaleConnectWallet"
+        component={PresaleConnectWallet}
+      />
     </Stack.Navigator>
-  ) 
-}
+  );
+};
 
-export default StackNavigator
+export default StackNavigator;
