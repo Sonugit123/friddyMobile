@@ -13,19 +13,19 @@ export const style = StyleSheet.create({
         backgroundColor: ColorConstants.WHITE,
         paddingHorizontal: scale(16),
     },
-    proofOfPaymentView: {
+    makePaymentView: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         marginTop: scale(24),
     },
-    proofOfPaymentTxt: {
+    makePaymentTxt: {
         color: ColorConstants.FRIDDY_SALE,
         fontFamily: Fontconstants.SEMIBOLD,
         ...getTextStyle(20),
         marginTop: scale(8),
     },
-    proofOfPaymentIcon: {
+    makePaymentIcon: {
         width: scale(24),
         height: scale(24),
     },
@@ -34,7 +34,7 @@ export const style = StyleSheet.create({
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(14),
     },
-    uploadProofView: {
+        uploadProofView: {
         // width: scale(327),
         height: scale(144),
         borderWidth: scale(1),

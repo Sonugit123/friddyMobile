@@ -13,19 +13,19 @@ export const style = StyleSheet.create({
         backgroundColor: ColorConstants.WHITE,
         paddingHorizontal: scale(16),
     },
-    proofOfPaymentView: {
+    makePaymentView: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         marginTop: scale(24),
     },
-    proofOfPaymentTxt: {
+    makePaymentTxt: {
         color: ColorConstants.FRIDDY_SALE,
         fontFamily: Fontconstants.SEMIBOLD,
         ...getTextStyle(20),
         marginTop: scale(8),
     },
-    proofOfPaymentIcon: {
+    makePaymentIcon: {
         width: scale(24),
         height: scale(24),
     },
@@ -33,31 +33,49 @@ export const style = StyleSheet.create({
         color: ColorConstants.GRAY_LABEL,
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(14),
+        marginTop: scale(8),
     },
-    uploadProofView: {
-        // width: scale(327),
-        height: scale(144),
-        borderWidth: scale(1),
-        borderStyle: 'dashed',
-        borderColor: ColorConstants.MODEL_BORDER_COLOR,
-        borderRadius: scale(8),
+    sentToTxt: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
         marginTop: scale(24),
+    },
+    profileIconView: {
+        width: scale(32),
+        height: scale(32),
+        backgroundColor: ColorConstants.SIGNIN_BOX,
+        borderRadius: scale(32),
         justifyContent: 'center',
         alignItems: 'center',
-        alignSelf: 'stretch',
     },
-    uploadIcon: {
-        width: scale(14),
-        height: scale(14),
-    },
-    uploadTransScriptTxt: {
+    profileIconTxt: {
         color: ColorConstants.BTNCOLOR,
-        fontFamily: Fontconstants.REGULAR,
+        fontFamily: Fontconstants.MEDIUM,
         ...getTextStyle(12),
     },
-    uploadIconView: {
+    profileNameTxt: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+    },
+    profileIconAndNameView: {
         flexDirection: 'row',
         alignItems: 'center',
         gap: scale(8),
-    }
+        marginTop: scale(8),
+    },
+    emailIcon: {
+        width: scale(18),
+        height: scale(18),
+        tintColor: ColorConstants.BTNCOLOR,
+    },
+    seeOnBlockExplorerTxt: {
+        color: ColorConstants.BTNCOLOR,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        textDecorationLine: 'underline',
+        alignSelf: 'center',
+        marginTop: scale(8),
+    },
 })

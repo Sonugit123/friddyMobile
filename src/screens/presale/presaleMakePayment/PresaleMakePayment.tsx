@@ -1,16 +1,16 @@
 import { View, Text, Image } from 'react-native';
 import React from 'react';
-import { style } from './style';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../../../components/header/Header';
 import { IconConstants } from '../../../constants/iconConstants';
-import { ColorConstants } from '../../../constants/colorConstants';
+import { style } from './style';
 import PreviewBuyCryptoWithTimer from '../../../components/previewBuyCryptoWithTimer/PreviewBuyCryptoWithTimer';
+import { ColorConstants } from '../../../constants/colorConstants';
 import { scale } from '../../../utils/scale';
 import CustomButton from '../../../components/customButton/CustomButton';
 import { Fontconstants } from '../../../constants/fontConstants';
 
-const MakePayment = () => {
+const PresaleMakePayment = () => {
   return (
     <SafeAreaView style={style.safeAreaStyle}>
       <Header />
@@ -28,7 +28,7 @@ const MakePayment = () => {
         <PreviewBuyCryptoWithTimer
           headingTxt="Amount Due"
           headingTxtColor={ColorConstants.WARNING_TXT}
-          coinValue="$200"
+          coinValue="$100"
           receiveValue="198.49"
           friddyFees="$0.15"
           bgColor={ColorConstants.WARNING_CONTAINER}
@@ -43,18 +43,18 @@ const MakePayment = () => {
             <View
               key={i}
               style={{
-                width: scale(12),
-                height: scale(1),
+                width: 12,
+                height: 1,
                 backgroundColor: '#ccc',
-                marginRight: scale(6),
+                marginRight: 6,
               }}
             />
           ))}
         </View>
         <Text style={style.sendToTxt}>Send to</Text>
         <View style={style.paytmView}>
-          <Image source={IconConstants.paytm} style={style.paytmIcon} />
-          <Text style={style.paytmTxt}>PayTM</Text>
+          <Image source={IconConstants.paypal2} style={style.paytmIcon} />
+          <Text style={style.paytmTxt}>PayPal</Text>
         </View>
         <Text style={style.accountNameTxt}>Account Name</Text>
         <View style={style.accountNameView}>
@@ -132,9 +132,123 @@ const MakePayment = () => {
             onPress={() => console.log('Cancel')}
           />
         </View>
+
+        {/* --------------------------------------------------------*/}
+        {/* <View style={{ flexDirection: 'row', marginTop: scale(8) }}>
+          {[...Array(20)].map((_, i) => {
+            return (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginRight: i == 18 ? scale(6) : scale(5),
+                }}
+              />
+            );
+          })}
+        </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <View>
+            {[...Array(10)].map((_, i) => (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginTop: scale(6),
+                }}
+              />
+            ))}
+          </View>
+          <View>
+            {[...Array(10)].map((_, i) => (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginTop: scale(6),
+                  marginLeft: scale(i * 6),
+                }}
+              />
+            ))}
+          </View>
+          <View style={{flex: 1}}>
+            {[...Array(10)].map((_, i) => (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginTop: scale(6),
+                }}
+              />
+            ))}
+          </View>
+          <View >
+            {[...Array(10)].map((_, i) => (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginTop: scale(6),
+                }}
+              />
+            ))}
+          </View>
+          <View>
+            {[...Array(10)].map((_, i) => (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginTop: scale(6),
+                  marginLeft: scale(i * 6),
+                }}
+              />
+            ))}
+          </View>
+          <View>
+            {[...Array(10)].map((_, i) => (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginTop: scale(6),
+                }}
+              />
+            ))}
+          </View>
+        </View>
+        <View style={{ flexDirection: 'row', marginTop: scale(0) }}>
+          {[...Array(20)].map((_, i) => {
+            return (
+              <View
+                key={i}
+                style={{
+                  width: scale(12),
+                  height: scale(1),
+                  backgroundColor: '#ccc',
+                  marginRight: i == 18 ? scale(6) : scale(5),
+                }}
+              />
+            );
+          })}
+        </View> */}
       </View>
     </SafeAreaView>
   );
 };
 
-export default MakePayment;
+export default PresaleMakePayment;

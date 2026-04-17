@@ -104,6 +104,11 @@ import PresaleCheckout from '../../screens/presale/presaleCheckout/PresaleChecko
 import PresaleProvideDetails from '../../screens/presale/presaleProvideDetails/PresaleProvideDetails';
 import PresaleQueuingSellers from '../../screens/presale/presaleQueuingSellers/PresaleQueuingSellers';
 import PresaleSellerInformation from '../../screens/presale/presaleSellerInformation/PresaleSellerInformation';
+import PresaleMakePayment from '../../screens/presale/presaleMakePayment/PresaleMakePayment';
+import PresaleProofOfPayment from '../../screens/presale/presaleProofOfPayment/PresaleProofOfPayment';
+import PresaleConfirmingPayment from '../../screens/presale/presaleConfirmingPayment/PresaleConfirmingPayment';
+import PresaleClaimFunds from '../../screens/presale/presaleClaimFunds/PresaleClaimFunds';
+import PresalePaymentSuccessful from '../../screens/presale/presalePaymentSuccessful/PresalePaymentSuccessful';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
@@ -218,7 +223,12 @@ const StackNavigator = () => {
       {/* <Stack.Screen name='PresaleAllPaymentMethod' component={PresaleAllPaymentMethod}/> */}
       {/* <Stack.Screen name='PresaleProvideDetails' component={PresaleProvideDetails}/> */}
       {/* <Stack.Screen name='PresaleQueuingSellers' component={PresaleQueuingSellers}/> */}
-      <Stack.Screen name='PresaleSellerInformation' component={PresaleSellerInformation}/>
+      {/* <Stack.Screen name='PresaleSellerInformation' component={PresaleSellerInformation}/> */}
+      {/* <Stack.Screen name='PresaleMakePayment' component={PresaleMakePayment}/> */}
+      {/* <Stack.Screen name='PresaleProofOfPayment' component={PresaleProofOfPayment}/> */}
+      {/* <Stack.Screen name='PresaleConfirmingPayment' component={PresaleConfirmingPayment}/> */}
+      {/* <Stack.Screen name='PresaleClaimFunds' component={PresaleClaimFunds}/> */}
+      <Stack.Screen name='PresalePaymentSuccessful' component={PresalePaymentSuccessful}/>
     </Stack.Navigator>
   ) 
 }
