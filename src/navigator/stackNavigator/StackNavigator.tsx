@@ -110,6 +110,9 @@ import PresaleProvideDetails from '../../screens/presale/presaleWithOtherMethods
 import PresaleQueuingSellers from '../../screens/presale/presaleWithOtherMethods/presaleQueuingSellers/PresaleQueuingSellers';
 import PresaleMakePayment from '../../screens/presale/presaleWithOtherMethods/presaleMakePayment/PresaleMakePayment';
 import PresaleProofOfPayment from '../../screens/presale/presaleWithOtherMethods/presaleProofOfPayment/PresaleProofOfPayment';
+import PresaleChooseToken from '../../screens/presale/presaleWithCrypto/presaleChooseToken/PresaleChooseToken';
+import PresaleChooseWallet from '../../screens/presale/presaleWithCrypto/presaleChooseWallet/PresaleChooseWallet';
+import PresaleProcessingPayment from '../../screens/presale/presaleWithCrypto/presaleProcessingPayment/PresaleProcessingPayment';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
@@ -227,10 +230,13 @@ const StackNavigator = () => {
       {/* <Stack.Screen name='PresaleConfirmingPayment' component={PresaleConfirmingPayment}/> */}
       {/* <Stack.Screen name='PresaleClaimFunds' component={PresaleClaimFunds}/> */}
       {/* <Stack.Screen name='PresalePaymentSuccessful' component={PresalePaymentSuccessful}/> */}
-      <Stack.Screen
+      {/* <Stack.Screen
         name="PresaleConnectWallet"
         component={PresaleConnectWallet}
-      />
+      /> */}
+      {/* <Stack.Screen name='PresaleChooseToken' component={PresaleChooseToken}/> */}
+      {/* <Stack.Screen name='PresaleChooseWallet' component={PresaleChooseWallet}/> */}
+      <Stack.Screen name='PresaleProcessingPayment' component={PresaleProcessingPayment}/>
     </Stack.Navigator>
   );
 };

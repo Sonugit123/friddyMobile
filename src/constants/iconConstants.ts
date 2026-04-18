@@ -109,4 +109,7 @@ export const IconConstants = {
     cashApp: require('../assets/icon/presale/cashApp.png'),
     friddyLogo: require('../assets/icon/presale/friddylogo.png'),
     inviteToEarn: require('../assets/icon/presale/inviteToEarn.png'),
+    binanceCoin: require('../assets/icon/presale/binanceCoin.png'),
+    arbitrumCoin: require('../assets/icon/presale/arbitrumCoin.png'),
+    optimismCoin: require('../assets/icon/presale/optimismCoin.png')
 }
