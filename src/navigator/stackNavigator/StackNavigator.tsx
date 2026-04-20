@@ -113,7 +113,8 @@ import PresaleProofOfPayment from '../../screens/presale/presaleWithOtherMethods
 import PresaleChooseToken from '../../screens/presale/presaleWithCrypto/presaleChooseToken/PresaleChooseToken';
 import PresaleChooseWallet from '../../screens/presale/presaleWithCrypto/presaleChooseWallet/PresaleChooseWallet';
 import PresaleProcessingPayment from '../../screens/presale/presaleWithCrypto/presaleProcessingPayment/PresaleProcessingPayment';
-import MyOfferChooseToken from '../../screens/trades/buyOrder/myOffer/MyOfferChooseToken';
+import MyOfferChooseToken from '../../screens/trades/buyOrder/myOfferChooseToken/MyOfferChooseToken';
+import MyOfferChoosePayment from '../../screens/trades/buyOrder/myOfferChoosePayment/MyOfferChoosePayment';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
@@ -238,7 +239,8 @@ const StackNavigator = () => {
       {/* <Stack.Screen name='PresaleChooseToken' component={PresaleChooseToken}/> */}
       {/* <Stack.Screen name='PresaleChooseWallet' component={PresaleChooseWallet}/> */}
       {/* <Stack.Screen name='PresaleProcessingPayment' component={PresaleProcessingPayment}/> */}
-      <Stack.Screen name='MyOfferChooseToken' component={MyOfferChooseToken}/>
+      {/* <Stack.Screen name="MyOfferChooseToken" component={MyOfferChooseToken} /> */}
+      <Stack.Screen name="MyOfferChoosePayment" component={MyOfferChoosePayment} />
     </Stack.Navigator>
   );
 };

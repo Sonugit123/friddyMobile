@@ -107,7 +107,7 @@ export const style = StyleSheet.create({
     },
     tokenCardSelected: {
         borderColor: ColorConstants.QR_BOX_BG,
-        backgroundColor: '#F5F7FF',
+        backgroundColor: ColorConstants.SIGNIN_BOX,
     },
     tokenCardUnselected: {
         borderColor: ColorConstants.BORDER_COLOR,
@@ -116,7 +116,7 @@ export const style = StyleSheet.create({
     coinIcon: {
         width: scale(42),
         height: scale(42),
-        marginRight: scale(16),
+        marginRight: scale(8),
     },
     tokenDetailsMiddle: {
         flex: 1,
@@ -134,6 +134,11 @@ export const style = StyleSheet.create({
     },
     tokenDetailsRight: {
         alignItems: 'flex-end',
+        flexDirection: 'row',
+    },
+    tokenRightTextGroup: {
+        alignItems: 'flex-end',
+        marginRight: scale(12),
     },
     tokenRightTopText: {
         color: ColorConstants.BLACK,
@@ -145,6 +150,73 @@ export const style = StyleSheet.create({
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(12),
         marginTop: scale(4),
+    },
+    crossMarkBox: {
+        width: scale(24),
+        height: scale(24),
+        borderRadius: scale(12),
+        backgroundColor: ColorConstants.QR_BOX_BG,
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center',
+    },
+    crossMarkIcon: {
+        width: scale(12),
+        height: scale(12),
+        tintColor: ColorConstants.BTNCOLOR,
+    },
+    choosePaymentTitle: {
+        color: ColorConstants.GRAY_LABEL,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+        marginBottom: scale(8),
+    },
+    // searchContainer: {
+    //     flexDirection: 'row',
+    //     alignItems: 'center',
+    //     borderWidth: scale(1),
+    //     borderColor: ColorConstants.BORDER_COLOR,
+    //     borderRadius: scale(8),
+    //     paddingHorizontal: scale(12),
+    //     height: scale(48),
+    //     marginBottom: scale(16),
+    // },
+    // searchIcon: {
+    //     width: scale(16),
+    //     height: scale(16),
+    //     marginRight: scale(8),
+    //     tintColor: ColorConstants.BLACK,
+    // },
+    // searchInput: {
+    //     flex: 1,
+    //     color: ColorConstants.BLACK,
+    //     fontFamily: Fontconstants.REGULAR,
+    //     ...getTextStyle(14),
+    // },
+    paymentMethodCard: {
+        width: '100%',
+        padding: scale(4),
+        borderWidth: scale(1),
+        borderColor: ColorConstants.BORDER_COLOR,
+        borderRadius: scale(8),
+        marginBottom: scale(16),
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: ColorConstants.WHITE,
+    },
+    paymentMethodCardSelected: {
+        backgroundColor: ColorConstants.SIGNIN_BOX,
+    },
+    paymentIcon: {
+        width: scale(32),
+        height: scale(32),
+        marginRight: scale(8),
+        resizeMode: 'contain',
+    },
+    paymentText: {
+        color: ColorConstants.BLACK,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(12),
     },
     shareTitleRow: {
         flexDirection: 'row',
@@ -165,7 +237,7 @@ export const style = StyleSheet.create({
     },
     shareItemsRow: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        gap: scale(16),
         paddingHorizontal: scale(8),
         paddingBottom: scale(24),
     },
@@ -173,19 +245,18 @@ export const style = StyleSheet.create({
         alignItems: 'center',
     },
     shareIconBox: {
-        width: scale(44),
-        height: scale(44),
+        width: scale(32),
+        height: scale(32),
         borderRadius: scale(22),
         backgroundColor: ColorConstants.WHITE,
         borderWidth: scale(1),
         borderColor: ColorConstants.BORDER_COLOR,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: scale(8),
     },
     shareIcon: {
-        width: scale(44),
-        height: scale(44),
+        width: scale(32),
+        height: scale(32),
     },
     shareIconInner: {
         width: scale(20),
@@ -195,6 +266,6 @@ export const style = StyleSheet.create({
     shareText: {
         color: ColorConstants.GRAY_LABEL,
         fontFamily: Fontconstants.REGULAR,
-        ...getTextStyle(10),
+        ...getTextStyle(12),
     }
 });

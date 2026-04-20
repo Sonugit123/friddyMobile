@@ -1,13 +1,22 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  Share,
+  FlatList,
+} from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { style } from './style';
 import Header from '../../../../components/header/Header';
-import BackHeader from '../../../../components/backHeader/BackHeader';
 import { IconConstants } from '../../../../constants/iconConstants';
 import CustomButton from '../../../../components/customButton/CustomButton';
 import { ColorConstants } from '../../../../constants/colorConstants';
 import { Fontconstants } from '../../../../constants/fontConstants';
+import RNShare, { Social } from 'react-native-share';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 const TOKENS = [
   {
@@ -92,6 +101,57 @@ const sellerInformationData = [
 ];
 const MyOfferChooseToken = () => {
   const [selectedTokenId, setSelectedTokenId] = useState<number>(1);
+
+  const handleShare = async (id: string) => {
+    const shareUrl = 'https://friddy.com/seller/1234567890';
+    const shareText = 'Check out this seller on Friddy!';
+    const shareOptions = {
+      title: 'Share Seller',
+      message: shareText,
+      url: shareUrl,
+    };
+
+    try {
+      switch (id) {
+        case 'copy':
+          Clipboard.setString(`${shareText} ${shareUrl}`);
+          break;
+        case 'whatsapp':
+          await RNShare.shareSingle({
+            ...shareOptions,
+            social: Social.Whatsapp,
+          });
+          break;
+        case 'x':
+          await RNShare.shareSingle({
+            ...shareOptions,
+            social: Social.Twitter,
+          });
+          break;
+        case 'telegram':
+          await RNShare.shareSingle({
+            ...shareOptions,
+            social: Social.Telegram,
+          });
+          break;
+        case 'facebook':
+          await RNShare.shareSingle({
+            ...shareOptions,
+            social: Social.Facebook,
+          });
+          break;
+        case 'more':
+          await Share.share({
+            message: `${shareText} ${shareUrl}`,
+          });
+          break;
+        default:
+          break;
+      }
+    } catch (error: any) {
+      console.log('Error sharing:', error?.message);
+    }
+  };
 
   return (
     <SafeAreaView style={style.safeAreaStyle}>
@@ -179,9 +239,9 @@ const MyOfferChooseToken = () => {
             <Image source={IconConstants.downArrow} style={style.downArrow} />
           </View>
 
-          <View style={style.shareItemsRow}>
+          {/* <View style={style.shareItemsRow}>
             {SHARE_OPTIONS.map(item => (
-              <View key={item.id} style={style.shareItemContainer}>
+              <TouchableOpacity key={item.id} style={style.shareItemContainer} onPress={() => handleShare(item.id)} activeOpacity={0.8}>
                 {item.isPill ? (
                   <View style={style.shareIconBox}>
                     <Image source={item.icon} style={style.shareIconInner} />
@@ -190,9 +250,32 @@ const MyOfferChooseToken = () => {
                   <Image source={item.icon} style={style.shareIcon} />
                 )}
                 <Text style={style.shareText}>{item.label}</Text>
-              </View>
+              </TouchableOpacity>
             ))}
-          </View>
+          </View> */}
+          <FlatList
+            data={SHARE_OPTIONS}
+            horizontal
+            keyExtractor={item => item.id}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={style.shareItemsRow}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                style={style.shareItemContainer}
+                onPress={() => handleShare(item.id)}
+                activeOpacity={0.8}
+              >
+                {item.isPill ? (
+                  <View style={style.shareIconBox}>
+                    <Image source={item.icon} style={style.shareIconInner} />
+                  </View>
+                ) : (
+                  <Image source={item.icon} style={style.shareIcon} />
+                )}
+                <Text style={style.shareText}>{item.label}</Text>
+              </TouchableOpacity>
+            )}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
