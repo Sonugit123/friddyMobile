@@ -5,7 +5,7 @@ import { scale } from '../../utils/scale';
 import { IconConstants } from '../../constants/iconConstants';
 
 interface PreviewBuyCryptoProps {
-    headingTxt: string,
+    headingTxt?: string,
     coinValue: string,
     receiveValue: string,
     friddyFees: string,
@@ -19,12 +19,12 @@ interface PreviewBuyCryptoProps {
 const PreviewBuyCrypto = ({ headingTxt, coinValue, receiveValue, friddyFees, topHeight, headingTxtColor, bgColor, isSuccess, coinIcon }: PreviewBuyCryptoProps) => {
   return (
         <View style={[style.container, { marginTop: scale(topHeight || 0), backgroundColor: bgColor }]}>
-          <View style={style.profileAndNameContainer}>
+          {headingTxt && <View style={style.profileAndNameContainer}>
           <View style={style.profileContainer}>
             <Text style={style.profileTxt}>JO</Text>
           </View>
             <Text style={[style.headingTxt, { color: headingTxtColor }]}>{headingTxt}</Text>
-          </View>
+          </View>}
             <View style={style.coinAndTickContainer}>
                 <View style={style.coinAndValueContainer}>
                     {/* <Image source={coinIcon || IconConstants.usdcCoin} style={style.usdcCoin} /> */}
