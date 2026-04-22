@@ -118,6 +118,9 @@ import MyOfferChoosePayment from '../../screens/trades/buyOrder/myOfferChoosePay
 import MyOfferChooseTokenAndPayment from '../../screens/trades/buyOrder/myOfferChooseTokenAndPayment/MyOfferChooseTokenAndPayment';
 import MyOfferEnterAmount from '../../screens/trades/buyOrder/myOfferEnterAmount/MyOfferEnterAmount';
 import MyOfferOrderSummary from '../../screens/trades/buyOrder/myOfferOrderSummary/MyOfferOrderSummary';
+import MyOfferPendingSelParticipation from '../../screens/trades/buyOrder/myOfferPendingSelPartiicipation/MyOfferPendingSelParticipation';
+import MyOfferMakePayment from '../../screens/trades/buyOrder/myOfferMakePayment/MyOfferMakePayment';
+import MyOfferProofOfPayment from '../../screens/trades/buyOrder/myOfferProofOfPayment/MyOfferProofOfPayment';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
@@ -246,7 +249,10 @@ const StackNavigator = () => {
       {/* <Stack.Screen name="MyOfferChoosePayment" component={MyOfferChoosePayment} /> */}
       {/* <Stack.Screen name="MyOfferChooseTokenAndPayment" component={MyOfferChooseTokenAndPayment} /> */}
       {/* <Stack.Screen name="MyOfferEnterAmount" component={MyOfferEnterAmount} /> */}
-      <Stack.Screen name="MyOfferOrderSummary" component={MyOfferOrderSummary} />
+      {/* <Stack.Screen name="MyOfferOrderSummary" component={MyOfferOrderSummary} /> */}
+      {/* <Stack.Screen name="MyOfferPendingSelParticipation" component={MyOfferPendingSelParticipation} /> */}
+      {/* <Stack.Screen name="MyOfferMakePayment" component={MyOfferMakePayment}/> */}
+      <Stack.Screen name="MyOfferProofOfPayment" component={MyOfferProofOfPayment}/>
     </Stack.Navigator>
   );
 };

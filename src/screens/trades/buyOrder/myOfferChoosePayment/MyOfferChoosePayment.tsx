@@ -4,9 +4,6 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-  Share,
-  FlatList,
-  TextInput,
 } from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -16,10 +13,9 @@ import { IconConstants } from '../../../../constants/iconConstants';
 import CustomButton from '../../../../components/customButton/CustomButton';
 import { ColorConstants } from '../../../../constants/colorConstants';
 import { Fontconstants } from '../../../../constants/fontConstants';
-import RNShare, { Social } from 'react-native-share';
-import Clipboard from '@react-native-clipboard/clipboard';
 import SearchBar from '../../../../components/searchBar/SearchBar';
 import { scale } from '../../../../utils/scale';
+import SocialShare from '../../../../components/socialShare/SocialShare';
 
 const PAYMENT_METHODS = [
   { id: 1, name: 'Paypal', icon: IconConstants.paypal },
@@ -29,29 +25,7 @@ const PAYMENT_METHODS = [
   { id: 5, name: 'PayTm', icon: IconConstants.paytm },
 ];
 
-const SHARE_OPTIONS = [
-  { id: 'copy', label: 'Copy', icon: IconConstants.copyIcon2, isPill: true },
-  {
-    id: 'whatsapp',
-    label: 'Whatsapp',
-    icon: IconConstants.whatsApp,
-    isPill: false,
-  },
-  { id: 'x', label: 'X', icon: IconConstants.xIcon, isPill: false },
-  {
-    id: 'telegram',
-    label: 'Telegram',
-    icon: IconConstants.telegram,
-    isPill: false,
-  },
-  {
-    id: 'facebook',
-    label: 'Facebook',
-    icon: IconConstants.messenger,
-    isPill: false,
-  },
-  { id: 'more', label: 'More', icon: IconConstants.xIcon, isPill: true },
-];
+
 
 const sellerInformationData = [
   { id: '1', icon: IconConstants.star, txt: '4.5' },
@@ -65,55 +39,6 @@ const MyOfferChoosePayment = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<
     number | null
   >(null);
-
-  const handleShare = async (id: string) => {
-    const shareUrl = 'https://friddy.com/seller/1234567890';
-    const shareText = 'Check out this seller on Friddy!';
-    const shareOptions = {
-      title: 'Share Seller',
-      message: shareText,
-      url: shareUrl,
-    };
-
-    try {
-      switch (id) {
-        case 'copy':
-          Clipboard.setString(`${shareText} ${shareUrl}`);
-          break;
-        case 'whatsapp':
-          await RNShare.shareSingle({
-            ...shareOptions,
-            social: Social.Whatsapp,
-          });
-          break;
-        case 'x':
-          await RNShare.shareSingle({
-            ...shareOptions,
-            social: Social.Twitter,
-          });
-          break;
-        case 'telegram':
-          await RNShare.shareSingle({
-            ...shareOptions,
-            social: Social.Telegram,
-          });
-          break;
-        case 'facebook':
-          await RNShare.shareSingle({
-            ...shareOptions,
-            social: Social.Facebook,
-          });
-          break;
-        case 'more':
-          await Share.share({ message: `${shareText} ${shareUrl}` });
-          break;
-        default:
-          break;
-      }
-    } catch (error: any) {
-      console.log('Error sharing:', error?.message);
-    }
-  };
 
   return (
     <SafeAreaView style={style.safeAreaStyle}>
@@ -214,33 +139,9 @@ const MyOfferChoosePayment = () => {
           />
 
           {/* Share Section */}
-          <View style={style.shareTitleRow}>
-            <Text style={style.shareTitle}>Share</Text>
-            <Image source={IconConstants.downArrow} style={style.downArrow} />
-          </View>
-
-          <FlatList
-            data={SHARE_OPTIONS}
-            horizontal
-            keyExtractor={item => item.id}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={style.shareItemsRow}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={style.shareItemContainer}
-                onPress={() => handleShare(item.id)}
-                activeOpacity={0.8}
-              >
-                {item.isPill ? (
-                  <View style={style.shareIconBox}>
-                    <Image source={item.icon} style={style.shareIconInner} />
-                  </View>
-                ) : (
-                  <Image source={item.icon} style={style.shareIcon} />
-                )}
-                <Text style={style.shareText}>{item.label}</Text>
-              </TouchableOpacity>
-            )}
+          <SocialShare
+            shareUrl="https://friddy.com/seller/1234567890"
+            shareText="Check out this seller on Friddy!"
           />
         </View>
       </ScrollView>

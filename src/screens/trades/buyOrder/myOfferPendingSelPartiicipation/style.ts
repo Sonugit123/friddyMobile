@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { ColorConstants } from "../../../../constants/colorConstants";
 import { getTextStyle, scale } from "../../../../utils/scale";
+import { ColorConstants } from "../../../../constants/colorConstants";
 import { Fontconstants } from "../../../../constants/fontConstants";
 
 export const style = StyleSheet.create({
@@ -48,9 +48,39 @@ export const style = StyleSheet.create({
         fontFamily: Fontconstants.REGULAR,
         ...getTextStyle(12),
     },
-    buttonContainer: {
+    pendingParticipationView: {
+        width: scale(327),
+        height: scale(48),
+        backgroundColor: ColorConstants.PENDING_PARTICIPATION_BOX,
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: scale(250),
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: scale(8),
+        borderRadius: scale(4),
+        marginTop: scale(24),
     },
-});
+    pendingParticipationTxt: {
+        color: ColorConstants.PENDING_PARTICIPATION_TXT,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+    },
+    clockPending: {
+        width: scale(16),
+        height: scale(16),
+    },
+    timerView: {
+        width: scale(79),
+        height: scale(24),
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        backgroundColor: ColorConstants.TIMER_BG,
+        borderRadius: scale(32),
+        padding: scale(4),
+    },
+    timerTxt: {
+        color: ColorConstants.PENDING_PARTICIPATION_TXT,
+        fontFamily: Fontconstants.REGULAR,
+        ...getTextStyle(14),
+    }
+})

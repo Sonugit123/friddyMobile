@@ -3,8 +3,6 @@ import {
   Text,
   ScrollView,
   Image,
-  Share,
-  FlatList,
   TouchableOpacity,
 } from 'react-native';
 import React, { useState } from 'react';
@@ -16,8 +14,7 @@ import InputBoxTwoLabel from '../../../../components/inputBoxTwoLabel/InputBoxTw
 import { ColorConstants } from '../../../../constants/colorConstants';
 import CustomButton from '../../../../components/customButton/CustomButton';
 import { Fontconstants } from '../../../../constants/fontConstants';
-import Clipboard from '@react-native-clipboard/clipboard';
-import RNShare, { Social } from 'react-native-share';
+import SocialShare from '../../../../components/socialShare/SocialShare';
 
 const sellerInformationData = [
   { id: '1', icon: IconConstants.star, txt: '4.5' },
@@ -25,67 +22,6 @@ const sellerInformationData = [
   { id: '3', icon: IconConstants.cart, txt: '1.8k USDC' },
   { id: '4', icon: IconConstants.btnCheck, txt: '90%' },
 ];
-
-const SHARE_OPTIONS = [
-  { id: 'copy', label: 'Copy', icon: IconConstants.copyIcon2, isPill: true },
-  {
-    id: 'whatsapp',
-    label: 'Whatsapp',
-    icon: IconConstants.whatsApp,
-    isPill: false,
-  },
-  { id: 'x', label: 'X', icon: IconConstants.xIcon, isPill: false },
-  {
-    id: 'telegram',
-    label: 'Telegram',
-    icon: IconConstants.telegram,
-    isPill: false,
-  },
-  {
-    id: 'facebook',
-    label: 'Facebook',
-    icon: IconConstants.messenger,
-    isPill: false,
-  },
-  { id: 'more', label: 'More', icon: IconConstants.xIcon, isPill: true },
-];
-
-const handleShare = async (id: string) => {
-  const shareUrl = 'https://friddy.com/seller/1234567890';
-  const shareText = 'Check out this seller on Friddy!';
-  const shareOptions = {
-    title: 'Share Seller',
-    message: shareText,
-    url: shareUrl,
-  };
-
-  try {
-    switch (id) {
-      case 'copy':
-        Clipboard.setString(`${shareText} ${shareUrl}`);
-        break;
-      case 'whatsapp':
-        await RNShare.shareSingle({ ...shareOptions, social: Social.Whatsapp });
-        break;
-      case 'x':
-        await RNShare.shareSingle({ ...shareOptions, social: Social.Twitter });
-        break;
-      case 'telegram':
-        await RNShare.shareSingle({ ...shareOptions, social: Social.Telegram });
-        break;
-      case 'facebook':
-        await RNShare.shareSingle({ ...shareOptions, social: Social.Facebook });
-        break;
-      case 'more':
-        await Share.share({ message: `${shareText} ${shareUrl}` });
-        break;
-      default:
-        break;
-    }
-  } catch (error: any) {
-    console.log('Error sharing:', error?.message);
-  }
-};
 
 const MyOfferEnterAmount = () => {
   const [amount, setAmount] = useState('');
@@ -168,33 +104,9 @@ const MyOfferEnterAmount = () => {
             onPress={() => console.log('Buy Pressed')}
           />
 
-          <View style={style.shareTitleRow}>
-            <Text style={style.shareTitle}>Share</Text>
-            <Image source={IconConstants.downArrow} style={style.downArrow} />
-          </View>
-
-          <FlatList
-            data={SHARE_OPTIONS}
-            horizontal
-            keyExtractor={item => item.id}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={style.shareItemsRow}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={style.shareItemContainer}
-                onPress={() => handleShare(item.id)}
-                activeOpacity={0.8}
-              >
-                {item.isPill ? (
-                  <View style={style.shareIconBox}>
-                    <Image source={item.icon} style={style.shareIconInner} />
-                  </View>
-                ) : (
-                  <Image source={item.icon} style={style.shareIcon} />
-                )}
-                <Text style={style.shareText}>{item.label}</Text>
-              </TouchableOpacity>
-            )}
+          <SocialShare
+            shareUrl="https://friddy.com/seller/1234567890"
+            shareText="Check out this seller on Friddy!"
           />
         </View>
       </ScrollView>
