@@ -121,6 +121,12 @@ import MyOfferOrderSummary from '../../screens/trades/buyOrder/myOfferOrderSumma
 import MyOfferPendingSelParticipation from '../../screens/trades/buyOrder/myOfferPendingSelPartiicipation/MyOfferPendingSelParticipation';
 import MyOfferMakePayment from '../../screens/trades/buyOrder/myOfferMakePayment/MyOfferMakePayment';
 import MyOfferProofOfPayment from '../../screens/trades/buyOrder/myOfferProofOfPayment/MyOfferProofOfPayment';
+import MyOfferWaitingForSeller from '../../screens/trades/buyOrder/myOfferWaitingForSeller/MyOfferWaitingForSeller';
+import SellOrderYouHaveCustomer from '../../screens/trades/sellOrder/sellOrderYouHaveCustomer/SellOrderYouHaveCustomer';
+import SellOrderWaitingForPayment from '../../screens/trades/sellOrder/sellOrderWaitingForPayment/SellOrderWaitingForPayment';
+import SellOrderBuyerMarkAsPaid from '../../screens/trades/sellOrder/sellOrderBuyerMarkAsPaid/SellOrderBuyerMarkAsPaid';
+import SellOrderPaymentConfirmed from '../../screens/trades/sellOrder/sellOrderPaymentConfirmed/SellOrderPaymentConfirmed';
+import SellOrderTransactionSuccessful from '../../screens/trades/sellOrder/sellOrderTransactionSuccessful/SellOrderTransactionSuccessful';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
@@ -252,7 +258,13 @@ const StackNavigator = () => {
       {/* <Stack.Screen name="MyOfferOrderSummary" component={MyOfferOrderSummary} /> */}
       {/* <Stack.Screen name="MyOfferPendingSelParticipation" component={MyOfferPendingSelParticipation} /> */}
       {/* <Stack.Screen name="MyOfferMakePayment" component={MyOfferMakePayment}/> */}
-      <Stack.Screen name="MyOfferProofOfPayment" component={MyOfferProofOfPayment}/>
+      {/* <Stack.Screen name="MyOfferProofOfPayment" component={MyOfferProofOfPayment}/> */}
+      {/* <Stack.Screen name="MyOfferWaitingForSeller" component={MyOfferWaitingForSeller}/> */}
+      {/* <Stack.Screen name="SellOrderYouHaveCustomer" component={SellOrderYouHaveCustomer}/> */}
+      {/* <Stack.Screen name="SellOrderWaitingForPayment" component={SellOrderWaitingForPayment}/> */}
+      {/* <Stack.Screen name="SellOrderBuyerMarkAsPaid" component={SellOrderBuyerMarkAsPaid}/> */}
+      {/* <Stack.Screen name="SellOrderPaymentConfirmed" component={SellOrderPaymentConfirmed}/> */}
+      <Stack.Screen name="SellOrderTransactionSuccessful" component={SellOrderTransactionSuccessful}/>
     </Stack.Navigator>
   );
 };

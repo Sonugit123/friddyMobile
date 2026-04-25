@@ -113,4 +113,5 @@ export const IconConstants = {
     arbitrumCoin: require('../assets/icon/presale/arbitrumCoin.png'),
     optimismCoin: require('../assets/icon/presale/optimismCoin.png'),
     clockPending: require('../assets/icon/myOffer/clockPending.png'),
+    receivedCheck: require('../assets/icon/myOffer/receivedCheck.png'),
 }
