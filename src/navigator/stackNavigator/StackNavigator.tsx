@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../../screens/auth/login/Login';
 import LoginGAuth from '../../screens/auth/loginGAuth/LoginGAuth';
@@ -99,26 +99,41 @@ import BackIdCardReview from '../../screens/kyc/backIdCardReview/BackIdCardRevie
 import QuickSelfieInfo from '../../screens/kyc/quickSelfieInfo/QuickSelfieInfo';
 import KycSelfie from '../../screens/kyc/kycSelfie/KycSelfie';
 import KycVerified from '../../screens/kyc/kycVerified/KycVerified';
-import PresaleAllPaymentMethod from '../../screens/presale/presaleAllPaymentMethod/PresaleAllPaymentMethod';
+import PresaleAllPaymentMethod from '../../screens/presale/presaleWithOtherMethods/presaleAllPaymentMethod/PresaleAllPaymentMethod';
 import PresaleCheckout from '../../screens/presale/presaleCheckout/PresaleCheckout';
-import PresaleProvideDetails from '../../screens/presale/presaleProvideDetails/PresaleProvideDetails';
-import PresaleQueuingSellers from '../../screens/presale/presaleQueuingSellers/PresaleQueuingSellers';
-import PresaleSellerInformation from '../../screens/presale/presaleSellerInformation/PresaleSellerInformation';
-import PresaleMakePayment from '../../screens/presale/presaleMakePayment/PresaleMakePayment';
-import PresaleProofOfPayment from '../../screens/presale/presaleProofOfPayment/PresaleProofOfPayment';
-import PresaleConfirmingPayment from '../../screens/presale/presaleConfirmingPayment/PresaleConfirmingPayment';
-import PresaleClaimFunds from '../../screens/presale/presaleClaimFunds/PresaleClaimFunds';
-import PresalePaymentSuccessful from '../../screens/presale/presalePaymentSuccessful/PresalePaymentSuccessful';
+import PresaleSellerInformation from '../../screens/presale/presaleWithOtherMethods/presaleSellerInformation/PresaleSellerInformation';
+import PresaleConfirmingPayment from '../../screens/presale/presaleWithOtherMethods/presaleConfirmingPayment/PresaleConfirmingPayment';
+import PresaleClaimFunds from '../../screens/presale/presaleWithOtherMethods/presaleClaimFunds/PresaleClaimFunds';
+import PresalePaymentSuccessful from '../../screens/presale/presaleWithOtherMethods/presalePaymentSuccessful/PresalePaymentSuccessful';
+import PresaleConnectWallet from '../../screens/presale/presaleWithCrypto/presaleConnectWallet/PresaleConnectWallet';
+import PresaleProvideDetails from '../../screens/presale/presaleWithOtherMethods/presaleProvideDetails/PresaleProvideDetails';
+import PresaleQueuingSellers from '../../screens/presale/presaleWithOtherMethods/presaleQueuingSellers/PresaleQueuingSellers';
+import PresaleMakePayment from '../../screens/presale/presaleWithOtherMethods/presaleMakePayment/PresaleMakePayment';
+import PresaleProofOfPayment from '../../screens/presale/presaleWithOtherMethods/presaleProofOfPayment/PresaleProofOfPayment';
+import PresaleChooseToken from '../../screens/presale/presaleWithCrypto/presaleChooseToken/PresaleChooseToken';
+import PresaleChooseWallet from '../../screens/presale/presaleWithCrypto/presaleChooseWallet/PresaleChooseWallet';
+import PresaleProcessingPayment from '../../screens/presale/presaleWithCrypto/presaleProcessingPayment/PresaleProcessingPayment';
+import MyOfferChooseToken from '../../screens/trades/buyOrder/myOfferChooseToken/MyOfferChooseToken';
+import MyOfferChoosePayment from '../../screens/trades/buyOrder/myOfferChoosePayment/MyOfferChoosePayment';
+import MyOfferChooseTokenAndPayment from '../../screens/trades/buyOrder/myOfferChooseTokenAndPayment/MyOfferChooseTokenAndPayment';
+import MyOfferEnterAmount from '../../screens/trades/buyOrder/myOfferEnterAmount/MyOfferEnterAmount';
+import MyOfferOrderSummary from '../../screens/trades/buyOrder/myOfferOrderSummary/MyOfferOrderSummary';
+import MyOfferPendingSelParticipation from '../../screens/trades/buyOrder/myOfferPendingSelPartiicipation/MyOfferPendingSelParticipation';
+import MyOfferMakePayment from '../../screens/trades/buyOrder/myOfferMakePayment/MyOfferMakePayment';
+import MyOfferProofOfPayment from '../../screens/trades/buyOrder/myOfferProofOfPayment/MyOfferProofOfPayment';
+import MyOfferWaitingForSeller from '../../screens/trades/buyOrder/myOfferWaitingForSeller/MyOfferWaitingForSeller';
+import SellOrderYouHaveCustomer from '../../screens/trades/sellOrder/sellOrderYouHaveCustomer/SellOrderYouHaveCustomer';
+import SellOrderWaitingForPayment from '../../screens/trades/sellOrder/sellOrderWaitingForPayment/SellOrderWaitingForPayment';
+import SellOrderBuyerMarkAsPaid from '../../screens/trades/sellOrder/sellOrderBuyerMarkAsPaid/SellOrderBuyerMarkAsPaid';
+import SellOrderPaymentConfirmed from '../../screens/trades/sellOrder/sellOrderPaymentConfirmed/SellOrderPaymentConfirmed';
+import SellOrderTransactionSuccessful from '../../screens/trades/sellOrder/sellOrderTransactionSuccessful/SellOrderTransactionSuccessful';
 // import ChangePhoneNumber from '../../screens/accountSecurity/changeNumber/changePhoneNumber/ChangePhoneNumber';
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
-
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
-    >
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       {/* <Stack.Screen name="Login" component={Login} /> */}
       {/* <Stack.Screen name="LoginGAuth" component={LoginGAuth} /> */}
       {/* <Stack.Screen name='ForgotPassword' component={ForgotPassword} /> */}
@@ -228,9 +243,30 @@ const StackNavigator = () => {
       {/* <Stack.Screen name='PresaleProofOfPayment' component={PresaleProofOfPayment}/> */}
       {/* <Stack.Screen name='PresaleConfirmingPayment' component={PresaleConfirmingPayment}/> */}
       {/* <Stack.Screen name='PresaleClaimFunds' component={PresaleClaimFunds}/> */}
-      <Stack.Screen name='PresalePaymentSuccessful' component={PresalePaymentSuccessful}/>
+      {/* <Stack.Screen name='PresalePaymentSuccessful' component={PresalePaymentSuccessful}/> */}
+      {/* <Stack.Screen
+        name="PresaleConnectWallet"
+        component={PresaleConnectWallet}
+      /> */}
+      {/* <Stack.Screen name='PresaleChooseToken' component={PresaleChooseToken}/> */}
+      {/* <Stack.Screen name='PresaleChooseWallet' component={PresaleChooseWallet}/> */}
+      {/* <Stack.Screen name='PresaleProcessingPayment' component={PresaleProcessingPayment}/> */}
+      {/* <Stack.Screen name="MyOfferChooseToken" component={MyOfferChooseToken} /> */}
+      {/* <Stack.Screen name="MyOfferChoosePayment" component={MyOfferChoosePayment} /> */}
+      {/* <Stack.Screen name="MyOfferChooseTokenAndPayment" component={MyOfferChooseTokenAndPayment} /> */}
+      {/* <Stack.Screen name="MyOfferEnterAmount" component={MyOfferEnterAmount} /> */}
+      {/* <Stack.Screen name="MyOfferOrderSummary" component={MyOfferOrderSummary} /> */}
+      {/* <Stack.Screen name="MyOfferPendingSelParticipation" component={MyOfferPendingSelParticipation} /> */}
+      {/* <Stack.Screen name="MyOfferMakePayment" component={MyOfferMakePayment}/> */}
+      {/* <Stack.Screen name="MyOfferProofOfPayment" component={MyOfferProofOfPayment}/> */}
+      {/* <Stack.Screen name="MyOfferWaitingForSeller" component={MyOfferWaitingForSeller}/> */}
+      {/* <Stack.Screen name="SellOrderYouHaveCustomer" component={SellOrderYouHaveCustomer}/> */}
+      {/* <Stack.Screen name="SellOrderWaitingForPayment" component={SellOrderWaitingForPayment}/> */}
+      {/* <Stack.Screen name="SellOrderBuyerMarkAsPaid" component={SellOrderBuyerMarkAsPaid}/> */}
+      {/* <Stack.Screen name="SellOrderPaymentConfirmed" component={SellOrderPaymentConfirmed}/> */}
+      <Stack.Screen name="SellOrderTransactionSuccessful" component={SellOrderTransactionSuccessful}/>
     </Stack.Navigator>
-  ) 
-}
+  );
+};
 
-export default StackNavigator
+export default StackNavigator;
